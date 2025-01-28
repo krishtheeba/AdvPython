@@ -1,0 +1,91 @@
+
+file: ab.py				file: p1.py
+------------				------------
+					import ab
+var=120					print(ab.var)
+def fa():				port=1000
+	print("hello")                  var=10
+-----------------------			-----------------
+
+
+__main__.var | 120                     ab.var  |  120
+--------------------			---------------
+__main__.fa  | 0x1234			__main__port  | 1000
+----------------------                 ----------------------------
+                                        __main__.var   | 10
+===========================================================================================
+
+
+directory 
+	|------ collection of files
+
+
+
+project/
+	m1.py..... m50.py
+	sub1/ma.py mb.py
+	sub1/sub2/ mc.py md.py
+
+|
+-------------------------------------
+
+
+import m1,m2.....
+
+(or)
+
+import m1
+import m2
+..
+100 lines
+
+import sub1.ma  //ok
+
+----------------------------------------------
+
+Package - not a keyword -term
+
+import packagename
+
+# 100 files imported
+
+----------------------------------------------------
+
+commandline steps
+-------------------------------------------------
+
+1.create a directory 
+2. go to directory
+3. collect all python files inside directory
+4. create a package initialization file   __init__.py
+                                           |
+                        5. import all external symbols to __init__.py 
+						=> from module import member
+5. test your package.
+
+
+ERP
+|-__init__.py
+|-sales.py  -> fa()
+|-prod.py  -> fb()
+|-CRM
+   |----customer.py   -> fc()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
